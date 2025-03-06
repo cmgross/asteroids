@@ -48,7 +48,7 @@ def main():
             for bullet in shots:
                 if (asteroid.collides_with(bullet)):
                     bullet.kill()
-                    asteroid.kill()
+                    asteroid.split()
         
         screen.fill((0, 0, 0))
 
