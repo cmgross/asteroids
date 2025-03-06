@@ -45,6 +45,10 @@ def main():
                 print("Game over!")
                 pygame.quit()  # Cleanly shutdown Pygame
                 sys.exit()  # Ensure Python exits completely
+            for bullet in shots:
+                if (asteroid.collides_with(bullet)):
+                    bullet.kill()
+                    asteroid.kill()
         
         screen.fill((0, 0, 0))
 
